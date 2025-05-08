@@ -1,8 +1,13 @@
 import static Utilidades.Print.print;
-import static Utilidades.Swap.swap;
 
 public class MergeSort {
 
+    /**
+     * Ordena un arreglo usando el algoritmo MergeSort.
+     * 
+     * @param arr Arreglo de enteros a ordenar.
+     * @return Nuevo arreglo ordenado.
+     */
     public static int[] mergeSort(int[] arr) {
         if (arr.length == 1) {
             return arr;
@@ -33,6 +38,13 @@ public class MergeSort {
         return merge(arregloizqordenado, arrderordenado);
     }
 
+    /**
+     * Combina dos arreglos ordenados en uno nuevo ordenado.
+     * 
+     * @param arregloizq Arreglo izquierdo ya ordenado.
+     * @param arregloder Arreglo derecho ya ordenado.
+     * @return Arreglo combinado y ordenado.
+     */
     public static int[] merge(int[] arregloizq, int[] arregloder) {
         int[] ordenado = new int[arregloder.length + arregloizq.length];
         // Para ir avanzando en el arreglo ordenado
@@ -68,7 +80,12 @@ public class MergeSort {
         return ordenado;
     }
 
-    /** Metodo que elimina el primer elemento de un arreglo */
+    /**
+     * Elimina el primer elemento de un arreglo.
+     * 
+     * @param arr Arreglo original.
+     * @return Nuevo arreglo sin el primer elemento.
+     */
     public static int[] pop(int[] arr) {
         int[] copia = new int[arr.length - 1];
 

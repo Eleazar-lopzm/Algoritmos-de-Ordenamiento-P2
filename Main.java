@@ -1,19 +1,23 @@
 import static Utilidades.Print.print;
-import static Utilidades.Swap.swap;
 
-public class main {
-
+public class Main {
+  // Textos para mostrar en consola
   public static String original = "Arreglo original:";
   public static String ordenado = "Arreglo ordenado:";
 
+  // Constantes para identificar los algoritmos:
   static final String selection = "-------------------------- \n SelectionSort \n--------------------------";
   static final String insertion = "-------------------------- \n InsertionSort \n--------------------------";
   static final String quick = "-------------------------- \n QuickSort \n--------------------------";
   static final String heap = "-------------------------- \n HeapSort \n--------------------------";
   static final String merge = "-------------------------- \n MergeSort \n--------------------------";
 
-  // Metodo que copia los elementos de un arreglo dado y devuelve la copia en un
-  // nuevo arreglo
+  /**
+   * Crea una copia independiente de un arreglo de enteros.
+   * 
+   * @param arr Arreglo original a copiar.
+   * @return Nuevo arreglo con los mismos elementos que el original.
+   */
   public static int[] copiaArreglo(int[] arr) {
     int longitud = arr.length;
     int[] arr2 = new int[longitud];
@@ -21,8 +25,13 @@ public class main {
     return arr2;
   }
 
-  // Metodo que realiza el procedimiento de las pruebas con un arreglo y su
-  // algoritmo y lo muestra
+  /**
+   * Ejecuta y muestra el resultado de un algoritmo de ordenamiento.
+   * 
+   * @param arr       Arreglo original a ordenar
+   * @param algoritmo Constante que identifica el algoritmo a usar (selection,
+   *                  insertion, etc.).
+   */
   public static void procedimiento(int[] arr, String algoritmo) {
     // hacemos una copia del algoritmo a ordenar
     int[] copia = copiaArreglo(arr);

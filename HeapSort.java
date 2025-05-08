@@ -2,7 +2,13 @@ import static Utilidades.Print.print;
 import static Utilidades.Swap.swap;
 
 public class HeapSort {
-
+    /**
+     * Reorganiza un subárbol para mantener la propiedad de max-heap.
+     * 
+     * @param arr Arreglo de enteros que representa el heap.
+     * @param n   Longitud del subárbol a procesar.
+     * @param i   Índice de la raíz del subárbol.
+     */
     public static void siftDown(int[] arr, int n, int i) {
         /**
          * Se inicializa en el primer elemento la raiz buscando el max heap y sus hijos
@@ -45,6 +51,13 @@ public class HeapSort {
         }
     }
 
+    /**
+     * Ajusta un elemento hacia arriba en el heap para mantener la propiedad de
+     * max-heap.
+     * 
+     * @param arr    Arreglo de enteros que representa el heap.
+     * @param ultimo Índice del elemento a ajustar.
+     */
     public static void siftUp(int[] arr, int ultimo) {
         System.out.println("El último elemento es: " + arr[ultimo]);
 
@@ -64,6 +77,11 @@ public class HeapSort {
         print(arr);
     }
 
+    /**
+     * Ordena un arreglo usando el algoritmo Heap Sort.
+     * 
+     * @param arr Arreglo de enteros a ordenar.
+     */
     public static void heapSort(int[] arr) {
         // Fase 1: Obtener max Heap con siftUp
         for (int i = 0; i < arr.length; i++) {
