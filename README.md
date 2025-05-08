@@ -9,9 +9,9 @@ Implementación de los principales algoritmos de ordenamiento en Java:
 
 ## Compilación y Ejecución
 
-1. **Compilar todos los archivos**:
+1. **Compilar todos los archivos desde la carpeta src**:
    ```bash
-   javac *.java**
-2. **Ejecutar**:
+   javac -d . *.java
+2. **Ejecutar desde la carpeta src**:
    ```bash
-   java Main
+   java src.Main
