@@ -1,3 +1,5 @@
+import static Utilidades.Print.print;
+import static Utilidades.Swap.swap;
 public class InsertionSort {
     
     public static void insertionSort(int[]arr){
